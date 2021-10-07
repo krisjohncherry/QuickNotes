@@ -32,17 +32,17 @@
                 </div>
                 <label class="form-label">Nazwa notatki:</label><br />
 
-                    <?php 
-                        if ($status == 1) {
-                            echo '<input type="checkbox" class="form-check-input" name="status[]" checked value='.$status.'/>';
-                        }else {
-                            echo '<input type="checkbox" class="form-check-input" name="status[]" value='.$status.'/>';
-                        }
-                    ?>
+                <?php 
+                    if ($status == 1) {
+                        echo '<input type="checkbox" class="form-check-input" name="status[]" checked value='.$status.'/>';
+                    }else {
+                        echo '<input type="checkbox" class="form-check-input" name="status[]" value='.$status.'/>';
+                    }
+                ?>
 
-                    <br />
-                    <br>
-                    <input class="btn btn-success" type="submit" value="Edytuj Notatkę" name="submit"  />
+                <br />
+                <br>
+                <input class="btn btn-success" type="submit" value="Edytuj Notatkę" name="submit"  />
                 
             </form>
             <?php
