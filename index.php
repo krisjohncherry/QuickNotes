@@ -12,6 +12,7 @@
                 <?php 
                         
                     require_once("read.php");
+                    require_once("footer.php");
                         $sql = "SELECT * FROM `notes`;";
                         $result = $conn->query($sql);  
                         if ($result->num_rows > 0) {
