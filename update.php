@@ -20,30 +20,30 @@
                 $status = $row[3];
             ?>
             <form action="" method="post">
-                <div>
+                <div class="col-md-6">
                     <h1>Edytuj notatkę <?php echo $title?></h1>
-                    Nazwa notatki:<br />
+                    <label class="form-label">Nazwa notatki:</label><br />
 
-                    <input name='nazwa_notatki' value="<?php echo $title; ?>"required><br/>
-
-                    Priorytet:<br />
-
-                    <input type='number' value="<?php echo $priority; ?>" name='priorytet' min='1' max='5' required/><br />
-
-                    Status:<br />
+                    <input name='nazwa_notatki' class="form-control" value="<?php echo $title; ?>"required><br/>
+                </div>
+                <label class="form-label">Priorytet:</label><br />
+                <div class="col-md-1">
+                    <input type='number' value="<?php echo $priority; ?>" class="form-control" name='priorytet' min='1' max='5' required/><br />
+                </div>
+                <label class="form-label">Nazwa notatki:</label><br />
 
                     <?php 
                         if ($status == 1) {
-                            echo '<input type="checkbox" name="status[]" checked value='.$status.'/>';
+                            echo '<input type="checkbox" class="form-check-input" name="status[]" checked value='.$status.'/>';
                         }else {
-                            echo '<input type="checkbox" name="status[]" value='.$status.'/>';
+                            echo '<input type="checkbox" class="form-check-input" name="status[]" value='.$status.'/>';
                         }
                     ?>
 
                     <br />
                     <br>
                     <input class="btn btn-success" type="submit" value="Edytuj Notatkę" name="submit"  />
-                </div>
+                
             </form>
             <?php
                 if(isset($_POST['submit'])){
