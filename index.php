@@ -12,7 +12,6 @@
                 <?php 
                         
                     require_once("read.php");
-
                         $sql = "SELECT * FROM `notes`;";
                         $result = $conn->query($sql);  
                         if ($result->num_rows > 0) {
@@ -20,7 +19,7 @@
                                 echo "<div class='card mb-1' style='max=width: 60rem;'><div class='row row-cols-0 row-cols-md-2 g-4'><div class='col-md-4'><img src='images/sticky-note-regular.png' class='img-fluid rounded-start' style='max-width:13rem;'></div>";
                                 echo "<div class='col-md-8'><div class='card-body'>";
                                 echo "<h5 class='card-header'>".$row['title']."</h5>";
-                                echo "<div class='card-footer'><a class='btn btn-success' href='read.php?id=".$row['id']."'>Kliknij</a><br><a class='btn btn-warning'href='update.php?id=".$row['id']."'>Edytuj</a><br><a class='btn btn-danger' href='delete.php?id=".$row['id']."'>Usuń</a></div></div></div></div></div>";
+                                echo "<div class='card-footer'><a class='btn btn-success mb-2' href='read.php?id=".$row['id']."'>Kliknij</a><br><a class='btn btn-warning mb-2'href='update.php?id=".$row['id']."'>Edytuj</a><br><a class='btn btn-danger mb-2' href='delete.php?id=".$row['id']."'>Usuń</a></div></div></div></div></div>";
                                 } 
                             }else {
                                 echo "0 results";

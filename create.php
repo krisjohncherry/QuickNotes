@@ -5,31 +5,26 @@
     </head>
     <body>
         <div class="container">
-            <?php 
-            require_once("navbar.php");
-            require_once "connection.php";?>
+            <?php require_once "navbar.php";
+            require_once "connection.php";
+            ?>
             <h1>STWÓRZ NOTATKĘ</h1>
             <form action="" method="post">
-                
-            <div class="mb-3">
-                <form class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label">Nazwa notatki:</label><br />
 
-                        <input name="nazwa_notatki" value="" required/><br />
-
+                        <input name="nazwa_notatki" class="form-control"  value="" required/><br />
+                    </div>
                         <label class="form-label">Priorytet:</label><br />
-
-                        <input type="number" name="priorytet" min="1" max="5" required/><br />
-
+                    <div class="col-md-1">
+                        <input type="number" name="priorytet" class="form-control" min="1" max="5" required/><br />
+                    </div>
                         Status:<br />
 
-                        <input type="checkbox" name='status[]' value=""  name="status_notatki" /><br /><br />
+                        <input type="checkbox" name='status[]' value="" class="form-check-input" name="status_notatki" /><br /><br />
 
                         <input class="btn btn-success" value="Stwórz" name="submit" type="submit">
-                    </div>
-                </form>
-            </div>
+                    
             </form>
 
             <?php
